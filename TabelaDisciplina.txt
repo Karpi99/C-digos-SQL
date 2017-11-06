@@ -1,24 +1,16 @@
-create table Disciplina
+CREATE TABLE Disciplina
 (
-    nome varchar(240) not null
-    ,carga_horaria tinyint not null
-    ,teoria decimal(3) not null
-    ,pratica decimal(3) not null
-    ,ementa text not null
-    ,competencias text not null
-    ,habilidades text not null
-    ,conteudo text not null
-    ,bibliografia_basica text not null
-    ,bibliografia_complementar text not null
-    ,constraint pkDisciplina primary key(nome)
+    nome VARCHAR(240) NOT NULL
+    ,carga_horaria TINYINT NOT NULL
+    ,teoria DECIMAL(3) NOT NULL
+    ,pratica DECIMAL(3) NOT NULL
+    ,ementa VARCHAR(50) NOT NULL
+    ,competencias VARCHAR(50) NOT NULL
+    ,habilidades VARCHAR(50) NOT NULL
+    ,conteudo VARCHAR(50) NOT NULL
+    ,bibliografia_basica VARCHAR(50) NOT NULL
+    ,bibliografia_complementar VARCHAR(50) NOT NULL
+    ,CONSTRAINT pkDisciplina PRIMARY KEY(nome)
 );
 
-
-create table Professor
-(
-    ra int primary key NOT NULL,
-    apelido varchar (30) unique  NOT NULL,
-    nome varchar (120) NOT NULL,
-    email varchar (30) NOT NULL,
-    celular char (11) NOT NULL
-)
+-- SELECT * FROM Disciplina
