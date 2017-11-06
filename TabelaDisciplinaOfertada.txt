@@ -1,0 +1,9 @@
+CREATE TABLE DisciplinaOfertada
+(
+    nome_disciplina VARCHAR(240)
+    ,CONSTRAINT fkDisciplina FOREIGN KEY(nome_disciplina)
+     REFERENCES Disciplina(nome)
+    ,ano SMALLINT NOT NULL
+    ,semestre CHAR(1)
+    ,CONSTRAINT pkDisciplinaOfertada PRIMARY KEY(semestre)
+);    
