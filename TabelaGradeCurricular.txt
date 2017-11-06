@@ -5,6 +5,7 @@ CREATE TABLE GradeCurricular
     REFERENCES curso(sigla),
     ano SMALLINT NOT NULL,
     semestre CHAR(1) NOT NULL,
-    CONSTRAINT pkGradeCurricular  PRIMARY KEY(ano)
-    
+    CONSTRAINT pkGradeCurricular PRIMARY KEY(ano)
 );
+
+-- SELECT * FROM GradeCurricular
