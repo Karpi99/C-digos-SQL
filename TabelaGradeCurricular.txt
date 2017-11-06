@@ -1,11 +1,11 @@
 CREATE TABLE GradeCurricular
 (
-    sigla_curso VARCHAR(5) NOT NULL,
-    CONSTRAINT fkcurso FOREIGN KEY(sigla_curso)
-    REFERENCES curso(sigla),
-    ano SMALLINT NOT NULL,
-    semestre CHAR(1) NOT NULL,
-    CONSTRAINT pkGradeCurricular PRIMARY KEY(ano)
+    sigla_curso VARCHAR(5) NOT NULL
+    ,CONSTRAINT fkcurso FOREIGN KEY(sigla_curso)
+    REFERENCES curso(sigla)
+    ,ano SMALLINT NOT NULL
+    ,semestre CHAR(1) NOT NULL
+    ,CONSTRAINT pkGradeCurricular PRIMARY KEY(ano)
 );
 
 -- SELECT * FROM GradeCurricular
