@@ -8,4 +8,4 @@ CREATE TABLE Aluno
     ,constraint pkAluno PRIMARY KEY(ra)
 );
 
--- select * from Aluno
+-- SELECT * FROM Aluno
