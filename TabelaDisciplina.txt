@@ -12,3 +12,13 @@ create table Disciplina
     ,bibliografia_complementar text not null
     ,constraint pkDisciplina primary key(nome)
 );
+
+
+create table Professor
+(
+    ra int primary key NOT NULL,
+    apelido varchar (30) unique  NOT NULL,
+    nome varchar (120) NOT NULL,
+    email varchar (30) NOT NULL,
+    celular char (11) NOT NULL
+)
