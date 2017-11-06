@@ -1,0 +1,12 @@
+create table Periodo 
+(
+    sigla_curso varchar(5)  not null,
+    ano_grade smallint  not null,
+    semestre_grade char(1)  not null,
+    numero tinyint primary key not null,
+    constraint fkPeriodo foreign key(sigla_curso)
+    references curso(sigla),
+    constraint fkGradeCurricular foreign key(ano_grade)
+    references GradeCurricular(ano)
+    
+);
