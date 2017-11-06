@@ -1,10 +1,12 @@
-create table Professor
+CREATE TABLE Professor
 (
-    ra int NOT NULL
-    ,apelido varchar (30) NOT NULL
-    ,nome varchar (120) NOT NULL
-    ,email varchar (80) NOT NULL
-    ,celular char (11) NOT NULL
-    ,constraint pkProfessor primary key(ra)
-    ,constraint uqapelido unique(apelido)
+    ra INT NOT NULL
+    ,apelido VARCHAR(30) NOT NULL
+    ,nome VARCHAR(120) NOT NULL
+    ,email VARCHAR(80) NOT NULL
+    ,celular CHAR(11) NOT NULL
+    ,CONSTRAINT pkProfessor PRIMARY KEY(ra)
+    ,CONSTRAINT uqapelido UNIQUE(apelido)
 );
+
+-- SELECT * FROM Professor
