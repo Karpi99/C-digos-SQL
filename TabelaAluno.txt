@@ -5,7 +5,7 @@ CREATE TABLE Aluno
     ,email VARCHAR(80) NOT NULL
     ,celular CHAR(11) NOT NULL
     ,sigla_curso CHAR(2) NOT NULL
-    ,constraint pkAluno primary key(ra)
-    );
+    ,constraint pkAluno PRIMARY KEY(ra)
+);
 
-select * from Aluno
+-- select * from Aluno
