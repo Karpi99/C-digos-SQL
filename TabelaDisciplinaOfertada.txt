@@ -7,3 +7,5 @@ CREATE TABLE DisciplinaOfertada
     ,semestre CHAR(1)
     ,CONSTRAINT pkDisciplinaOfertada PRIMARY KEY(semestre)
 );    
+
+-- SELECT * FROM DisciplinaOfertada
