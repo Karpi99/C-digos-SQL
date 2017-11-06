@@ -1,0 +1,14 @@
+create table Disciplina
+(
+    nome varchar(240) not null
+    ,carga_horaria tinyint not null
+    ,teoria decimal(3) not null
+    ,pratica decimal(3) not null
+    ,ementa text not null
+    ,competencias text not null
+    ,habilidades text not null
+    ,conteudo text not null
+    ,bibliografia_basica text not null
+    ,bibliografia_complementar text not null
+    ,constraint pkDisciplina primary key(nome)
+);
