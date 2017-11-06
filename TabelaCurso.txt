@@ -1,7 +1,9 @@
-create table curso
+CREATE TABLE Curso
 (
-	sigla varchar(5) not null
-	,nome varchar(50) not null
-	,constraint pkcurso primary key(sigla)
-	,constraint uqnome unique(nome)
+	sigla VARCHAR(5) NOT NULL
+	,nome VARCHAR(50) NOT NULL
+	,CONSTRAINT pkcurso PRIMARY KEY(sigla)
+	,CONSTRAINT uqnome UNIQUE(nome)
 );
+
+-- SELECT * FROM Curso
