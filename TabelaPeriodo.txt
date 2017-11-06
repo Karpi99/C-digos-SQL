@@ -1,12 +1,13 @@
-create table Periodo 
+CREATE TABLE Periodo 
 (
-    sigla_curso varchar(5)  not null,
-    ano_grade smallint  not null,
-    semestre_grade char(1)  not null,
-    numero tinyint primary key not null,
-    constraint fkPeriodo foreign key(sigla_curso)
-    references curso(sigla),
-    constraint fkGradeCurricular foreign key(ano_grade)
-    references GradeCurricular(ano)
-    
+    sigla_curso VARCHAR(5) NOT NULL
+    ,ano_grade SMALLINT NOT NULL
+    ,semestre_grade CHAR(1) NOT NULL
+    ,numero TINYINT PRIMARY KEY NOT NULL
+    ,CONSTRAINT fkPeriodo FOREIGN KEY(sigla_curso)
+     REFERENCES curso(sigla)
+    ,CONSTRAINT fkGradeCurricular FOREIGN KEY(ano_grade)
+     REFERENCES GradeCurricular(ano)
 );
+
+-- SELECT * FROM Periodo
