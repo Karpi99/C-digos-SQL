@@ -1,0 +1,18 @@
+CREATE TABLE arquivosquestao
+(
+    nome_disciplina VARCHAR(240) NOT NULL
+    ,ano_ofertado SMALLINT NOT NULL
+    ,semestre_ofertado CHAR(1) NOT NULL
+    ,id_turma CHAR(1) NOT NULL
+    ,numero_questao INT NOT NULL
+    ,arquivo VARCHAR(500) NOT NULL
+    ,CONSTRAINT pkarquivosquestao PRIMARY KEY(arquivo)
+    ,CONSTRAINT fk_disciplina_oi FOREIGN KEY(nome_disciplina)
+     REFERENCES disciplina(nome)
+    ,CONSTRAINT fk_disciplinaofertada_tchau FOREIGN KEY(semestre_ofertado)
+     REFERENCES disciplinaofertada(semestre)
+    ,CONSTRAINT fkturma FOREIGN KEY(id_turma)
+     REFERENCES turma(id)
+    ,CONSTRAINT fkquestao FOREIGN KEY(numero_questao)
+     REFERENCES questao(numero)
+)
