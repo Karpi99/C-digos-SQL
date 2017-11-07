@@ -1,13 +1,13 @@
-CREATE TABLE Periodo 
+CREATE TABLE periodo 
 (
     sigla_curso VARCHAR(5) NOT NULL
     ,ano_grade SMALLINT NOT NULL
     ,semestre_grade CHAR(1) NOT NULL
     ,numero TINYINT PRIMARY KEY NOT NULL
-    ,CONSTRAINT fkPeriodo FOREIGN KEY(sigla_curso)
+    ,CONSTRAINT fkperiodo FOREIGN KEY(sigla_curso)
      REFERENCES curso(sigla)
-    ,CONSTRAINT fkGradeCurricular FOREIGN KEY(ano_grade)
-     REFERENCES GradeCurricular(ano)
+    ,CONSTRAINT fkgradecurricular FOREIGN KEY(ano_grade)
+     REFERENCES gradecurricular(ano)
 );
 
--- SELECT * FROM Periodo
+-- SELECT * FROM periodo
