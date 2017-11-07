@@ -1,0 +1,26 @@
+create table Respostas(
+
+nome_disciplina varchar(240) not null,
+ano_ofertado smallint not null,
+semestre_ofertado char(1) not null,
+id_turma char(1) not null,
+numero_questao int not null,
+ra_aluno int primary key not null,
+data_avaliacao date not null,
+nota decimal(4,2) not null,
+avaliacao varchar(100) not null,
+descricao varchar(100) not null,
+data_de_envio date not null,
+
+constraint fkdisciplina_ foreign key (nome_disciplina)
+references disciplina(nome),
+
+constraint fksemestre_ofertado_ foreign key (semestre_ofertado)
+references disciplinaofertada(semestre),
+
+constraint fkid_turma_ foreign key (id_turma)
+references turma(id),
+
+constraint fknumero_questao_ foreign key (numero_questao)
+references questao(numero)
+);
