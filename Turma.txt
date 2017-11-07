@@ -1,0 +1,14 @@
+CREATE TABLE Turma
+(
+    nome_disciplina VARCHAR(240) NOT NULL,
+    ano_ofertado SMALLINT NOT NULL,
+    semestre_ofertado CHAR(1) NOT NULL,
+    id CHAR(1) NOT NULL,
+    turno VARCHAR(15) NOT NULL,
+    ra_professor INT NOT NULL,
+    CONSTRAINT pkturma PRIMARY KEY(id),
+    CONSTRAINT fkturma_sem_of FOREIGN KEY(semestre_ofertado)
+    REFERENCES disciplinaofertada(semestre),
+    CONSTRAINT fkturma_prof FOREIGN KEY(ra_professor)
+    REFERENCES professor(ra)
+);
