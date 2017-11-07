@@ -1,4 +1,4 @@
-CREATE TABLE Disciplina
+CREATE TABLE disciplina
 (
     nome VARCHAR(240) NOT NULL
     ,carga_horaria TINYINT NOT NULL
@@ -10,7 +10,7 @@ CREATE TABLE Disciplina
     ,conteudo VARCHAR(50) NOT NULL
     ,bibliografia_basica VARCHAR(50) NOT NULL
     ,bibliografia_complementar VARCHAR(50) NOT NULL
-    ,CONSTRAINT pkDisciplina PRIMARY KEY(nome)
+    ,CONSTRAINT pkdisciplina PRIMARY KEY(nome)
 );
 
--- SELECT * FROM Disciplina
+-- SELECT * FROM disciplina
