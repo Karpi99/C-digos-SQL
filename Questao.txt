@@ -1,0 +1,17 @@
+create table Questao
+(
+    nome_disciplina varchar(240) not null,
+    ano_ofertado smallint not null,
+    semestre_ofertado char(1),
+    id_turma char(1),
+    numero int primary key,
+    data_limite_entrega date,
+    descricao varchar (200) not null,
+    data_ DATE,
+    constraint fk_disciplina foreign key (nome_disciplina)
+    references disciplina(nome),
+    constraint fk_disciplinaofertada foreign key (semestre_ofertado)
+    references disciplinaofertada(semestre),
+    constraint fk_turma foreign key (id_turma)
+    references Turma(id),
+);
