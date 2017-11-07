@@ -1,0 +1,17 @@
+CREATE TABLE cursoturma
+(
+    sigla_curso VARCHAR(5) NOT NULL,
+    nome_disciplina VARCHAR(240) NOT NULL,
+    ano_ofertado SMALLINT NOT NULL,
+    semestre_ofertado CHAR(1) NOT NULL,
+    id_turma CHAR(1) NOT NULL,
+    CONSTRAINT pk_curso PRIMARY KEY(id_turma),
+    CONSTRAINT fkcurso_turma_sigla_curso FOREIGN KEY(sigla_curso)
+    REFERENCES curso(sigla),
+    CONSTRAINT fkcurso_turma_sem_of FOREIGN KEY(semestre_ofertado)
+    REFERENCES disciplinaofertada(semestre),
+    CONSTRAINT fkcurso_turma_nome_disc FOREIGN KEY(nome_disciplina)
+    REFERENCES disciplina(nome)
+
+    );
+ 
