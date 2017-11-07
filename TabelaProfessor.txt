@@ -1,4 +1,4 @@
-CREATE TABLE Professor
+CREATE TABLE professor
 (
     ra INT NOT NULL
     ,apelido VARCHAR(30) NOT NULL
@@ -9,4 +9,4 @@ CREATE TABLE Professor
     ,CONSTRAINT uqapelido UNIQUE(apelido)
 );
 
--- SELECT * FROM Professor
+-- SELECT * FROM professor
