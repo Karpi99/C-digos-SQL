@@ -1,4 +1,4 @@
-CREATE TABLE Curso
+CREATE TABLE curso
 (
 	sigla VARCHAR(5) NOT NULL
 	,nome VARCHAR(50) NOT NULL
@@ -6,4 +6,4 @@ CREATE TABLE Curso
 	,CONSTRAINT uqnome UNIQUE(nome)
 );
 
--- SELECT * FROM Curso
+-- SELECT * FROM curso
