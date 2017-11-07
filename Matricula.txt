@@ -1,5 +1,6 @@
-create table Matricula
+create table matricula
 (
+    id_matricula int not null,
     ra_aluno int not null,
     nome_disciplina varchar(240) not null,
     ano_ofertado smallint not null,
@@ -16,6 +17,8 @@ create table Matricula
     references disciplinaofertada(semestre),
 
     constraint fk_turma_ foreign key (id_turma)
-    references turma(id)
-
+    references turma(id),
+    
+    constraint pk_id_matricula primary key (id_matricula)
+    
     );
