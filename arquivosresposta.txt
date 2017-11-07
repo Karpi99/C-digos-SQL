@@ -1,0 +1,25 @@
+create table arquivosresposta(
+
+    nome_disciplina varchar(240) not null,
+    ano_ofertado smallint not null,
+    semestre_ofertado char(1) not null,
+    id_turma char(1) not null,
+    numero_questao int not null,
+    ra_aluno int not null,
+    arquivo varchar (500) primary key not null,
+
+    constraint fknome_disciplina__ foreign key (nome_disciplina)
+    references disciplina(nome),
+
+     constraint fksemestre_ofertado__ foreign key (semestre_ofertado)
+    references disciplinaofertada (semestre),
+
+     constraint fkid_turma__ foreign key (id_turma)
+    references turma(id),
+
+     constraint fknumero_questao__ foreign key (numero_questao)
+    references questao(numero),
+
+     constraint fkra_aluno__ foreign key (ra_aluno)
+    references aluno(ra)
+    );
