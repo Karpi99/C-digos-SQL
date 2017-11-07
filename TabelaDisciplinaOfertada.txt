@@ -1,11 +1,11 @@
-CREATE TABLE DisciplinaOfertada
+CREATE TABLE disciplinaofertada
 (
     nome_disciplina VARCHAR(240)
-    ,CONSTRAINT fkDisciplina FOREIGN KEY(nome_disciplina)
-     REFERENCES Disciplina(nome)
+    ,CONSTRAINT fkdisciplina FOREIGN KEY(nome_disciplina)
+     REFERENCES disciplina(nome)
     ,ano SMALLINT NOT NULL
     ,semestre CHAR(1)
-    ,CONSTRAINT pkDisciplinaOfertada PRIMARY KEY(semestre)
+    ,CONSTRAINT pkdisciplinaofertada PRIMARY KEY(semestre)
 );    
 
--- SELECT * FROM DisciplinaOfertada
+-- SELECT * FROM disciplinaofertada
